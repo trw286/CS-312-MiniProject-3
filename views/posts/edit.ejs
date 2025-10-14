@@ -1,0 +1,33 @@
+<!-- include header-->
+<%- include('../partials/_header') %>
+
+<section class="container">
+
+  	<!-- edit post -->
+  	<h1 class="mb-2">Edit Post</h1>
+  	<form action="/posts/<%= post.blog_id %>?_method=PUT" method="POST" class="card">
+    	<div class="card-body">
+
+      	<div class="mb-2">
+
+        	<label for="title">Title</label>
+        	<input id="title" name="title" type="text" required class="input" value="<%- post.title %>" />
+
+      	</div>
+
+      	<div class="mb-2">
+
+        	<label for="body">Body</label>
+        	<textarea id="body" name="body" rows="6" required class="textarea"><%- post.body %></textarea>
+			
+      	</div>
+
+      	<!-- save changes to post -->
+      	<button class="btn" type="submit">Save Changes</button>
+      	<a class="btn btn-secondary" href="/posts">Cancel</a>
+    	</div>
+  	</form>
+</section>
+
+<!-- include footer-->
+<%- include('../partials/_footer') %>

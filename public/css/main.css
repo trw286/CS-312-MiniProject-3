@@ -1,0 +1,146 @@
+
+:root {
+	--bg: #d3d3d3;
+  	--text: #000000;
+  	--accent: #60a5fa;
+  	--accent-2: #34d399;
+  	--danger: #ef4444;
+}
+
+* { 
+	box-sizing: border-box; 
+}
+
+html, body { 
+  	margin: 0; 
+  	padding: 0; 
+  	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', 'Noto Sans', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; 
+}
+
+body { 
+	background: var(--bg); 
+	color: var(--text); 
+}
+
+.container { 
+	max-width: 900px; 
+	margin: 0 auto; 
+	padding: 1rem; }
+
+.site-header, .site-footer { 
+	background: var(--bg); 
+}
+
+.site-header .container, .site-footer .container { 
+	display: flex; 
+	align-items: center; 
+	justify-content: space-between; 
+}
+
+.brand { 
+	color: var(--text); 
+	font-weight: 700; 
+	text-decoration: none; 
+}
+
+nav a { 
+	color: var(--text); 
+	text-decoration: none; 
+	margin-left: 1rem; 
+}
+
+nav a:hover { 
+	color: var(--text); 
+}
+
+h1, h2, h3 { 
+	margin-top: 0.5rem; 
+}
+
+.post-list { 
+	list-style: none; 
+	padding: 0; 
+	display: grid; 
+	gap: 1rem; 
+}
+
+.post-item { 
+	background: var(--bg); 
+	padding: 1rem; 
+	border-radius: 12px; 
+	border: 3px solid black;
+}
+
+.post-item h2 { 
+	margin: 0 0 .25rem 0; 
+}
+
+.meta { 
+	color: var(--text); 
+	font-size: 0.9rem; 
+	margin: .25rem 0 1rem 0; 
+}
+
+.post header { 
+	margin-bottom: .75rem; 
+}
+
+.post .content { 
+	white-space: pre-wrap; 
+}
+
+.btn {
+  	display: inline-block;
+  	background: var(--accent);
+ 	color: #0b1020;
+  	border: none;
+  	padding: .6rem .9rem;
+  	text-decoration: none;
+  	border-radius: 10px;
+  	cursor: pointer;
+  	font-weight: 600;
+}
+
+.btn:hover { 
+	filter: brightness(1.1); 
+}
+
+.btn.secondary { 
+	background: var(--accent-2); 
+}
+
+.btn.danger { 
+	background: var(--danger); color: #fff;
+ }
+
+
+.form { 
+	background: var(--bg); 
+	padding: 1rem; 
+	border-radius: 12px; 
+}
+
+.form label { 
+	display: block; 
+	margin-bottom: 1rem; 
+}
+
+.form input[type="text"], .form textarea {
+  	width: 100%;
+  	padding: .6rem .7rem;
+  	border-radius: 8px;
+  	border: 1px solid #374151;
+  	background: #d3d3d3;
+  	color: var(--text);
+}
+
+.form-actions { 
+	display: flex; 
+	gap: .5rem; 
+}
+
+.error { 
+	background: #7f1d1d; 
+	padding: .6rem .8rem; 
+	border-radius: 8px; 
+}

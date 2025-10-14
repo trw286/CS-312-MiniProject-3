@@ -1,0 +1,31 @@
+<!-- include header -->
+<%- include('../partials/_header') %>
+
+<section class="container">
+    <h1 class="mb-2">New Post</h1>
+
+    <!-- create new post-->
+    <form action="/posts" method="POST" class="card">
+		<div class="card-body">
+      	<div class="mb-2">
+
+        	<label for="title">Title</label>
+        	<input id="title" name="title" type="text" required class="input" />
+
+      	</div>
+      	<div class="mb-2">
+
+        	<label for="body">Body</label>
+        	<textarea id="body" name="body" rows="6" required class="textarea"></textarea>
+
+      	</div>
+
+    	<!-- send new post to DB -->
+      	<button class="btn" type="submit">Publish</button>
+      	<a class="btn btn-secondary" href="/posts">Cancel</a>
+    	</div>
+  	</form>
+</section>
+
+<!-- include footer -->
+<%- include('../partials/_footer') %>
