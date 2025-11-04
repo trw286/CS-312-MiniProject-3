@@ -1,0 +1,31 @@
+<!--render header-->
+<%- include('../partials/_header', { title: post.title }) %>
+
+<!-- show form for post s-->
+<article class="post">
+    <header>
+
+      	<!-- title -->
+      	<h1><%= post.title %></h1>
+    
+      	<!-- post content -->
+      	<p class="meta">Post #<%= post.id %> • <%= new Date(post.createdAt).toLocaleString() %></p>
+
+    </header>
+
+    <div class="content"><%= post.content %></div>
+    <div class="actions">
+
+      	<a class="btn" href="/posts/<%= post.id %>/edit">Edit</a>
+
+      	<!-- delete pots -->
+      	<form method="POST" action="/posts/<%= post.id %>?_method=DELETE" onsubmit="return confirm('Delete this post?');" style="display:inline;">
+      		
+			<button class="btn danger" type="submit">Delete</button>
+			
+      	</form>
+    </div>
+</article>
+
+<!--render footer-->
+<%- include('../partials/_footer') %>

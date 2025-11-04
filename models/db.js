@@ -3,12 +3,12 @@
 */
 
 // variables and file setup
-
-    // load database
-require('dotenv').config();
     
     // PostgreSQL client for node
 const { Pool } = require('pg');
+
+    // load database
+require('dotenv').config();
 
 // pool instance
 const pool = new Pool({
