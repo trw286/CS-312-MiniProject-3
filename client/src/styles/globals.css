@@ -1,0 +1,4 @@
+/* global style sheet */
+body { background: #f7f7f9; }
+.card { border-radius: 0.75rem; }
+.navbar-brand { font-weight: 600; }
