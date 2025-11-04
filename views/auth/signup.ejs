@@ -1,0 +1,36 @@
+<!-- include header -->
+<%- include('../partials/_header') %>
+
+<section class="container">
+
+  <h1 class="mb-2">Sign Up</h1>
+  <form action="/auth/signup" method="POST" class="card">
+    <div class="card-body">
+
+        <div class="mb-2">
+
+            <label for="user_id">Username</label>
+            <input id="user_id" name="user_id" required class="input" />
+
+        </div>
+        <div class="mb-2">
+
+            <label for="name">Full name</label>
+            <input id="name" name="name" required class="input" />
+
+        </div>
+        <div class="mb-2">
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required class="input" />
+
+        </div>
+
+        <button class="btn" type="submit">Create Account</button>
+        <a class="btn btn-secondary" href="/auth/signin">Have an account? Sign in</a>
+    </div>
+  </form>
+</section>
+
+<!-- include footer -->
+<%- include('../partials/_footer') %>
